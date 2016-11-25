@@ -8,10 +8,40 @@
   <body>
     <h1>Select Dinámico</h1>
     <div class="formulario">
-      País: <input type="text" name="pais" id="pais" onchange="actualizar_estados();"><br />
-      Estado: <input type="text" name="estado" id="estado"><br />
+      País: <select name="pais" id="pais" onchange="actualizar_estados();"></select><br>
+      Estado: <select name="estado" id="estado"></select><br>
     </div>
     <script>
+        var estados = {
+          'México': [
+              'Aguascalientes', 'Baja California', 'Baja California Sur',
+              'Campeche', 'Chiapas', 'Chihuahua', 'Coahuila', 'Colima',
+              'Distrito Federal', 'Durango', 'Estado de México',
+              'Guanajuato', 'Guerrero', 'Hidalgo', 'Jalisco', 'Michoacán',
+              'Morelos', 'Nayarit', 'Nuevo León', 'Oaxaca', 'Puebla',
+              'Querétaro', 'Quintana Roo', 'San Luis Potosí', 'Sinaloa',
+              'Sonora', 'Tabasco', 'Tamaulipas', 'Tlaxcala', 'Veracruz',
+              'Yucatán', 'Zacatecas'],
+          'Estados Unidos': [
+              'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
+              'Carolina del Norte', 'Carolina del Sur', 'Colorado',
+              'Connecticut', 'Dakota del Norte', 'Dakota del Sur',
+              'Delaware', 'Florida', 'Georgia', 'Hawái', 'Idaho', 'Illinois',
+              'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Luisiana', 'Maine',
+              'Maryland', 'Massachusetts', 'Michigan', 'Minnesota',
+              'Misisipi', 'Misuri', 'Montana', 'Nebraska', 'Nevada',
+              'Nueva Jersey', 'Nueva York', 'Nuevo Hamoshire',
+              'Nuevo México', 'Ohio', 'Oklahoma', 'Oregón', 'Pensilvania',
+              'Rhode Island', 'Tennessee', 'Texas', 'Utah', 'Vermont',
+              'Virginia', 'Virginia Occidental', 'Washington', 'Wisconsin',
+              'Wyoming'],
+          'Alemania': [
+              'Baden-Wurtemberg', 'Baja Sajonia', 'Baviera', 'Berlín',
+              'Brandeburgo', 'Bremen', 'Hamburgo', 'Hesse',
+              'Mecklemburgo-Pomerania Occidental',
+              'Renania del Norte-Westfalia', 'Renania-Palatinado', 'Sajonia',
+              'Sajonia-Anhalt', 'Sarre', 'Schleswig-Holstein', 'Turingia'],
+        }
         /*
             Ejercicio 1: Cuando carga la página, llena el select de países
             con la lista de países.
