@@ -22,24 +22,27 @@
           var num_min = parseInt (document.querySelector("#minimo").value);
           var num_max = parseInt (document.querySelector("#maximo").value);
 
-          var table = "<table>"
+          var table = "<table>";
 
-          for (i = 1; i <= num_max; i++) {
-            if ( i == 1 ){
-              i += (num_min - 1)
-            } else {
-              i++
-            }
+          for (i = num_min; i <= num_max; i++) {
             table += "<tr>";
              for (j = num_min; j <= num_max; j++){
-               table += "<td>" + i * j + "</td>";
+              table += "<td>" + i*j + "</td>";
              }
-             table += "</tr>"
+            table += "</tr>"
           }
-          table += "</table>";
-          resultado.innerHTML += table;
+
+          table += "<table/>"
+          resultado.innerHTML += table
+
         }
 
+
+        // function print(table) {
+        //   var result = document.querySelector("#resultado");
+        //   resultado.innerHTML += table + "<br>";
+
+          // }
 
 
     </script>
