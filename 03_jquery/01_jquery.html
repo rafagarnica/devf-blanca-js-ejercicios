@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery introducción</title>
+  </head>
+  <body>
+    <h1>jQuery introducción</h1>
+    <a href="http://jquery.com/">jQuery</a>
+
+    <!-- Este snippet de http://code.jquery.com -->
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>
+  <script>
+
+    $( document ).ready(function() {
+        $( "a" ).click(function( event ) {
+            alert( "The link will no longer take you to jquery.com" );
+            event.preventDefault();
+        });
+        $("body").addClass("animated hinge");
+    });
+
+  </script>
+  </body>
+</html>
